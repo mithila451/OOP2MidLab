@@ -12,5 +12,38 @@ namespace BANK
         private string houseNo;
         private string city;
         private string country;
+
+
+        public string RoadNo
+        {
+            get { return this.roadNo; }
+            set { this.roadNo = value; }
+        }
+
+        public string HouseNo
+        {
+            get { return this.houseNo; }
+            set { this.houseNo = value; }
+        }
+
+        public string City
+        {
+            get { return this.city; }
+            set { this.city = value; }
+        }
+
+        public string Country
+        {
+            get { return this.country; }
+            set { this.country = value; }
+        }
+
+        public string GetAddress()
+        {
+            string address = "Address for the account: Road No - " + roadNo + " House No - " + houseNo + " City - " + city + " Country - " + country + "\n";
+            return address;
+        }
+
+
     }
 }
