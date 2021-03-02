@@ -16,31 +16,27 @@ namespace BANK
 
         public string RoadNo
         {
-            get { return this.roadNo; }
-            set { this.roadNo = value; }
+            get { return this.roadNo; } set { this.roadNo = value; }
         }
 
         public string HouseNo
         {
-            get { return this.houseNo; }
-            set { this.houseNo = value; }
+            get { return this.houseNo; } set { this.houseNo = value; }
         }
 
         public string City
         {
-            get { return this.city; }
-            set { this.city = value; }
+            get { return this.city; }  set { this.city = value; }
         }
 
         public string Country
         {
-            get { return this.country; }
-            set { this.country = value; }
+            get { return this.country; } set { this.country = value; }
         }
 
         public string GetAddress()
         {
-            string address = "Address for the account: Road No - " + roadNo + " House No - " + houseNo + " City - " + city + " Country - " + country + "\n";
+            string address = "Address :\n" + "Road No - " + roadNo + "\nHouse No - " + houseNo + "\nCity - " + city + "\nCountry - " + country + "\n";
             return address;
         }
 

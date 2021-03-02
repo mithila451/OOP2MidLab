@@ -14,22 +14,24 @@ namespace BANK
         private Address address;
         static int idg = 5670;
 
+        public Account(Address address)
+        {
+            this.address = address;
+        }
+
         public string AccountName
         {
-            get { return this.accountName; }
-            set { this.accountName = value; }
+            get { return this.accountName; } set { this.accountName = value; }
         }
 
         public double Balance
         {
-            get { return this.balance; }
-            set { this.balance = value; }
+            get { return this.balance; } set { this.balance = value; }
         }
 
         public Address Address
         {
-            get { return this.address; }
-            set { this.address = value; }
+            get { return this.address; } set { this.address = value; }
         }
 
         public int AccountNumber
@@ -37,6 +39,11 @@ namespace BANK
             get { return this.accountNumber; }
         }
 
+        public void GenarateAccountNumber()
+        {
+            this.accountNumber = idg;
+            idg++;
+        }
         public void Withdraw(double amount)
         {
             if (amount > 0 && amount <= balance)
@@ -52,6 +59,17 @@ namespace BANK
                 balance = balance + amount;
             }
         }
+
+        public void Transfer(double amount, Account receiver)
+        {
+            if (amount > 0 && amount <= balance)
+            {
+                balance = balance - amount;
+                receiver.Deposit(amount);
+            }
+        }
+
+
 
     }
 }

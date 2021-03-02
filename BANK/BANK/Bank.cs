@@ -20,13 +20,12 @@ namespace BANK
                     myBank[i] = account;
                     myBank[i].GenarateAccountNumber();
                     Console.WriteLine("Enter Your Address_");
-                    Console.WriteLine("Road No, House No, City, Country -");
+                    Console.WriteLine("Road No-House No-City-Country-");
                     myBank[i].Address.RoadNo = Console.ReadLine();
                     myBank[i].Address.HouseNo = Console.ReadLine();
                     myBank[i].Address.City = Console.ReadLine();
                     myBank[i].Address.Country = Console.ReadLine();
-                    Console.WriteLine("New Account Created..");
-                    myBank[i].ShowAccountInformation();
+                    //myBank[i].ShowAccountInformation();
                     break;
                 }
             }
@@ -39,7 +38,6 @@ namespace BANK
                 if (myBank[i].AccountNumber == accountNumber)
                 {
                     myBank[i] = null;
-                    Console.WriteLine("Account Deleted..");
                     break;
                 }
             }
@@ -50,11 +48,9 @@ namespace BANK
         {
             for (int i = 0; myBank[i] != null; i++)
             {
-                Console.WriteLine((i + 1) + ". " + myBank[i].AccountName);
+                //Console.WriteLine((i + 1) + ". " + myBank[i].);
             }
-            Console.WriteLine("Insert Account Serial No. If You Further Want To See The Full Information Of An Account...");
-            int choice = Convert.ToInt32(Console.ReadLine());
-            myBank[choice - 1].ShowAccountInformation();
+            
         }
     }
 }
