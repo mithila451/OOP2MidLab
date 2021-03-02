@@ -11,6 +11,11 @@ namespace BANK
         private string bankName;
         private Account[] myBank = new Account[5];
 
+        public string BankName
+        {
+            get { return this.bankName; }  set { this.bankName = value; }
+        }
+
         public void AddAccount(Account account)
         {
             for (int i = 0; i < myBank.Length; i++)

@@ -36,8 +36,29 @@ namespace BANK
                         bank.DeleteAccount(Nd);
                         break;
 
+                    case 3:
+                        Console.WriteLine("Enter The Transaction Service:\n1.Deposit\n2.Withdraw\n3.Transfer");
+                        int c2 = Convert.ToInt32(Console.ReadLine());
+                        Console.WriteLine("Enter The Amount:");
+                        int amount = Convert.ToInt32(Console.ReadLine());
+                        Console.WriteLine("Enter The Account Number:");
+                        int senderNumber = Convert.ToInt32(Console.ReadLine());
+                        bank.Transaction(c2, senderNumber, amount);
+                        break;
+                    case 4:
+                        Console.WriteLine("These Are All Your Accounts..");
+                        bank.PrintAccountDetails();
+                        break;
+                    case 5:
+                        cycle = false;
+                        break;
+                    default:
+                        break;
+
 
 
                 }
+            }
+        }
     }
 }
