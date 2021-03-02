@@ -86,12 +86,12 @@ namespace BANK
 
                     Console.WriteLine("receiver Account Number :");
                     int rN = Convert.ToInt32(Console.ReadLine());
-                    int Nt = 0;
+                    int nt = 0;
                     for (int i = 0; i < myBank.Length; i++)
                     {
                         if (myBank[i].AccountNumber == rN)
                         {
-                            Nt = i;
+                            nt = i;
                             break;
                         }
 
@@ -101,7 +101,7 @@ namespace BANK
                     {
                         if (myBank[i].AccountNumber == sAN)
                         {
-                            myBank[i].Transfer(amount, myBank[Nt]);
+                            myBank[i].Transfer(amount, myBank[nt]);
                             break;
                         }
                     }
