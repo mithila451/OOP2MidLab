@@ -25,7 +25,6 @@ namespace BANK
                     myBank[i].Address.HouseNo = Console.ReadLine();
                     myBank[i].Address.City = Console.ReadLine();
                     myBank[i].Address.Country = Console.ReadLine();
-                    //myBank[i].ShowAccountInformation();
                     break;
                 }
             }
@@ -48,9 +47,64 @@ namespace BANK
         {
             for (int i = 0; myBank[i] != null; i++)
             {
-                //Console.WriteLine((i + 1) + ". " + myBank[i].);
+                myBank[i].ShowAccountInformation();
             }
             
+        }
+
+        public void Transaction(int choice, int sAN, int amount)
+        {
+            switch (choice)
+            {
+                case 1:
+
+                    for (int i = 0; i < myBank.Length; i++)
+                    {
+                        if (myBank[i].AccountNumber == sAN)
+                        {
+                            myBank[i].Deposit(amount);
+                            break;
+                        }
+                    }
+                    break;
+                case 2:
+                    for (int i = 0; i < myBank.Length; i++)
+                    {
+                        if (myBank[i].AccountNumber == sAN)
+                        {
+                            myBank[i].Withdraw(amount);
+                            break;
+                        }
+                    }
+                    break;
+                case 3:
+
+                    Console.WriteLine("receiver Account Number :");
+                    int rN = Convert.ToInt32(Console.ReadLine());
+                    int Nt = 0;
+                    for (int i = 0; i < myBank.Length; i++)
+                    {
+                        if (myBank[i].AccountNumber == rN)
+                        {
+                            Nt = i;
+                            break;
+                        }
+
+                    }
+
+                    for (int i = 0; i < myBank.Length; i++)
+                    {
+                        if (myBank[i].AccountNumber == sAN)
+                        {
+                            myBank[i].Transfer(amount, myBank[Nt]);
+                            break;
+                        }
+                    }
+                    break;
+
+                default:
+                    break;
+            }
         }
     }
 }

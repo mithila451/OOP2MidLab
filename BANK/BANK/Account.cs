@@ -69,7 +69,15 @@ namespace BANK
             }
         }
 
+        public void ShowAccountInformation()
+        {
+            Console.WriteLine("Account info :");
+            Console.WriteLine("name : " + this.accountName);
+            Console.WriteLine("number : " + this.accountNumber);
+            Console.WriteLine("balance : " + this.balance);
+            Console.WriteLine("address : " + this.address.GetAddress());
 
+        }
 
     }
 }
