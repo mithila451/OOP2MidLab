@@ -1,0 +1,7 @@
+F:\OOP2LAB\BANK\BANK\bin\Debug\BANK.exe.config
+F:\OOP2LAB\BANK\BANK\bin\Debug\BANK.exe
+F:\OOP2LAB\BANK\BANK\bin\Debug\BANK.pdb
+F:\OOP2LAB\BANK\BANK\obj\Debug\BANK.csprojAssemblyReference.cache
+F:\OOP2LAB\BANK\BANK\obj\Debug\BANK.csproj.CoreCompileInputs.cache
+F:\OOP2LAB\BANK\BANK\obj\Debug\BANK.exe
+F:\OOP2LAB\BANK\BANK\obj\Debug\BANK.pdb
